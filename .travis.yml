@@ -4,24 +4,7 @@ language: python
 
 python:
   - "2.7"
-  - "3.5"
+  - "3.7"
 
-cache:
-  paths:
-    - .cache/pip
-    - venv/
-
-stages:
-  - Test
-  - Run
-
-Test:
-  stage: Test
-  script:
-   - python setup.py sdist
-   - pip install dist/*
-
-Run:
-  stage: Run
-  script:
+script:
    - python test.py

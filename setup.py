@@ -1,5 +1,4 @@
-import sys
-from setuptools import find_packages, setup
+import setuptools
 
 TITLE = "tocamelcase"
 VERSION = "0.0.4"
@@ -9,14 +8,8 @@ LIC = "MIT"
 AUTHOR_NAME = "Carlos Abraham"
 AUTHOR_MAIL = "abraham@abranhe.com"
 
-__license__ = "MIT"
-__copyright__ = "Copyright 2018 Carlos Abraham"
-
-
-def open_file(filename):
-    """Open and read the file *filename*."""
-    with open(filename) as f:
-        return f.read()
+with open("README.md", "r") as d:
+    LONG_DESCRIPTION = d.read()
 
 setup(
     name=TITLE,
@@ -30,7 +23,7 @@ setup(
         'Source': 'https://github.com/abranhe/tocamelcase/',
     },
     license=LIC,
-    long_description=open("README.md").read(),
+    long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     classifiers=[
         'Intended Audience :: Developers',
