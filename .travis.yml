@@ -7,7 +7,10 @@ python:
   - "3.3"
   - "3.4"
   - "3.7"
-  
+
+install:
+  - pip install codecov
+
 script:
   - coverage run test.py
 
