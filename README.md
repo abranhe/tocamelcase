@@ -12,7 +12,6 @@
 </p>
 
 
-
 # Install
 
 ```
@@ -30,9 +29,13 @@ $ pip install tocamelcase
 ```py
 import tocamelcase
 
-print (tocamelcase.toCamelCase("non_camel_case"))
-#>>> NonCamelCase
+print (tocamelcase.convert("non_camel_case"))
+# Eg: non_camel_case → NonCamelCase
 ```
+
+# Related
+
+- [🐍  decamelize](https://github.com/abranhe/decamelize): Convert a camelized string into snake_case
 
 # Team
 

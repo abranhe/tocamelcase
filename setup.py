@@ -1,41 +1,28 @@
 import setuptools
 
-TITLE = "tocamelcase"
-VERSION = "0.0.4"
-SUMMARY = "🐫 To Camel Case: self explanatory!"
-LIC = "MIT"
+with open("README.md", "r") as file:
+    long_description = file.read()
 
-AUTHOR_NAME = "Carlos Abraham"
-AUTHOR_MAIL = "abraham@abranhe.com"
-
-with open("README.md", "r") as d:
-    LONG_DESCRIPTION = d.read()
-
-setup(
-    name=TITLE,
+setuptools.setup(
+    name = "tocamelcase",
     packages = ["tocamelcase"],
-    version=VERSION,
-    description=SUMMARY,
-    author=AUTHOR_NAME,
-    author_email=AUTHOR_MAIL,
-    include_package_data=True,
+    version = "0.0.7",
+    description = "🐫 To Camel Case: self explanatory!",
+    long_description = long_description,
+    long_description_content_type = "text/markdown",
+    license = "MIT",
+    author = "Carlos Abraham",
+    author_email = "abraham@abranhe.com",
+    url = "https://abranhe.com",
+    classifiers=(
+        "Programming Language :: Python",
+        "Natural Language :: English",
+        "Environment :: Plugins",
+        "Operating System :: OS Independent",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+    ),
     project_urls={
-        'Source': 'https://github.com/abranhe/tocamelcase/',
+        'Source': 'https://github.com/abranhe/tocamelcase',
     },
-    license=LIC,
-    long_description=LONG_DESCRIPTION,
-    long_description_content_type='text/markdown',
-    classifiers=[
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
-        'Operating System :: MacOS :: MacOS X',
-        'Operating System :: POSIX :: Linux',
-        'Operating System :: Microsoft :: Windows',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-    ]
 )
